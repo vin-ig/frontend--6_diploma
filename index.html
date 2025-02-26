@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Macaroons</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="dist/css/styles.min.css">
+    <script src="src/js/less.min.js"></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Logo">
+        </div>
+        <nav class="menu" id="menu">
+            <div class="close" id="close">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+                                c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+                                c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+                                L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+                                c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+                                c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+                                c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z"/>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <ul>
+                <li><a href="#products">Пироженки</a></li>
+                <li><a href="#advantages">О нас</a></li>
+                <li><a href="#order">Оформить заказ</a></li>
+            </ul>
+        </nav>
+        <div class="contacts">+375 (29) 368-98-68</div>
+        <div class="burger" id="burger"></div>
+    </div>
+</header>
+
+<section class="main">
+    <div class="container">
+        <div class="main-info">
+            <h1>Мягкие французские пироженки Macaroons</h1>
+            <p>Побалуйте себя и своих близких самыми вкусными и ароматными домашними пироженками Macaroon!</p>
+            <button onclick="location.href='#products'" class="button-main">Выбрать макарун</button>
+        </div>
+        <div class="main-image">
+            <img src="assets/images/macaroons-main.png" alt="Macaroons">
+        </div>
+    </div>
+</section>
+
+<section class="advantages" id="advantages">
+    <div class="container">
+        <article class="advantages-title">
+            <div class="advantages-description">
+                <h2>Мы печём для вас вкуснейшие макаруны уже более 10 лет</h2>
+                <p>
+                    Все пироженки мы готовим только из натуральных и качественных продуктов, без консервантов,
+                    ароматизаторов, красителей. Используем в приготовлении сливочное масло 82,5%, без дрожжей, маргарина,
+                    разрыхлителей и улучшителей муки.
+                </p>
+            </div>
+            <div class="advantages-image">
+                <img src="assets/images/big-macaroon.png" alt="Macaroon">
+            </div>
+        </article>
+        <article class="advantages-items">
+            <div class="advantages-item">
+                <div class="advantages-item-number">1</div>
+                <div class="advantages-item-title">Лучшие продукты</div>
+                <div class="advantages-item-text">
+                    Мы честно готовим макаруны только из натуральных и качественных продуктов. Мы не используем консерванты,
+                    ароматизаторы и красители.
+                </div>
+            </div>
+            <div class="advantages-item">
+                <div class="advantages-item-number">2</div>
+                <div class="advantages-item-title">Много вкусов</div>
+                <div class="advantages-item-text">
+                    Наша задача – предоставить вам широкое разнобразие вкусов. Вы удивитесь, но у нас более 70 вкусов
+                    пироженок.
+                </div>
+            </div>
+            <div class="advantages-item">
+                <div class="advantages-item-number">3</div>
+                <div class="advantages-item-title">Бисквитное тесто</div>
+                <div class="advantages-item-text">
+                    Все пирожные готовятся на бисквитном тесте с качественным сливочным маслом 82,5%. В составе нет
+                    маргарина и дрожжей!
+                </div>
+            </div>
+            <div class="advantages-item">
+                <div class="advantages-item-number">4</div>
+                <div class="advantages-item-title">Честный продукт</div>
+                <div class="advantages-item-text">
+                    Вкус, качество и безопасность наших пирогов подтверждена декларацией о соответствии, которую мы получили
+                    22.06.2016 г.
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="products" id="products">
+    <div class="container">
+        <h2>Выберите свой макарун</h2>
+        <article class="product-items">
+            <figure class="product">
+                <div class="product-image">
+                    <img src="assets/images/product-1.png" alt="Product">
+                </div>
+                <h3>Макарун с малиной</h3>
+                <div class="product-details">
+                    <div class="product-info">
+                        <span>1 шт.</span>
+                        <span>1.70 руб.</span>
+                    </div>
+                    <button onclick="location.href='#order'" class="button-product">Заказать</button>
+                </div>
+            </figure>
+            <figure class="product">
+                <div class="product-image">
+                    <img src="assets/images/product-2.png" alt="Product">
+                </div>
+                <h3>Макарун с манго</h3>
+                <div class="product-details">
+                    <div class="product-info">
+                        <span>1 шт.</span>
+                        <span>1.70 руб.</span>
+                    </div>
+                   <button onclick="location.href='#order'" class="button-product">Заказать</button>
+                </div>
+            </figure>
+            <figure class="product">
+                <div class="product-image">
+                    <img src="assets/images/product-3.png" alt="Product">
+                </div>
+                <h3>Макарун с ванилью</h3>
+                <div class="product-details">
+                    <div class="product-info">
+                        <span>1 шт.</span>
+                        <span>1.70 руб.</span>
+                    </div>
+                   <button onclick="location.href='#order'" class="button-product">Заказать</button>
+                </div>
+            </figure>
+            <figure class="product">
+                <div class="product-image">
+                    <img src="assets/images/product-4.png" alt="Product">
+                </div>
+                <h3>Макарун с фисташками</h3>
+                <div class="product-details">
+                    <div class="product-info">
+                        <span>1 шт.</span>
+                        <span>1.70 руб.</span>
+                    </div>
+                   <button onclick="location.href='#order'" class="button-product">Заказать</button>
+                </div>
+            </figure>
+        </article>
+    </div>
+</section>
+
+<section class="order" id="order">
+    <div class="container">
+        <div class="order-image-berry" id="berry-1">
+            <img src="assets/images/strawberry-1.png" alt="Strawberry">
+        </div>
+        <div class="order-image-berry" id="berry-2">
+            <img src="assets/images/strawberry-2.png" alt="Strawberry">
+        </div>
+
+        <div class="order-image-main">
+            <img src="assets/images/macaroons-order.png" alt="Macaroons">
+        </div>
+        <form class="order-form">
+            <h2>Закажите макарун!</h2>
+            <p>Выберите понравившийся макарун, заполните форму и ожидайте звонка нашего пекаря!</p>
+            <h3>Ваш выбор</h3>
+            <input id="product-input" type="text" placeholder="Напишите, что хотите заказать...">
+            <div class="error-input">Введите название макарун</div>
+            <h3>Заполните данные для заказа</h3>
+            <input id="name-input" type="text" placeholder="Ваше имя">
+            <div class="error-input">Введите имя</div>
+            <input id="phone-input" type="text" placeholder="+375 (__) ___-__-__">
+            <div class="error-input">Введите телефон</div>
+            <button type="button" class="button-order" id="submit-order">Оформить заказ</button>
+        </form>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Logo">
+        </div>
+        <div class="rights">Все права защищены, 2020</div>
+        <div class="instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+            </svg>
+            <span>Мы в Instagram</span>
+        </div>
+        <div class="contacts">+375 (29) 368-98-68</div>
+    </div>
+</footer>
+
+<section class="present">
+    <div class="present-circle">
+        <img src="assets/images/present.png" alt="Present">
+    </div>
+    <div class="present-label">
+        Оформите заказ <br> и получите подарок!
+    </div>
+</section>
+
+<div class="loader">
+    <div class="lds-ripple"><div></div><div></div></div>
+</div>
+
+<script src="src/js/jquery.min.js"></script>
+<script src="src/js/index.js"></script>
+</body>
+</html>
