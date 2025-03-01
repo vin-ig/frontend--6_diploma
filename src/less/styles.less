@@ -119,6 +119,7 @@ body {
     padding: 125px 0 36px;
     .container {
         .flex-between();
+        position: relative;
         .main-info {
             max-width: 670px;
             h1 {
@@ -151,10 +152,13 @@ body {
             }
         }
         .main-burger {  // 621 x 436 px
-            position: relative;
+            top: 0;
             .main-burger-image {
+                text-align: right;
                 img {
-                    width: 100%;
+                    width: 125%;
+                    position: relative;
+                    right: -66px;
                 }
             }
             .main-burger-label {
