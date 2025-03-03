@@ -251,9 +251,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    h3 {
-        font-family: "Formular Bold";
-        font-size: 36px;
+    .section-title {
         padding-bottom: 20px;
     }
     p {
@@ -273,77 +271,42 @@ body {
 
 /* ADVANTAGES */
 .advantages {
-    .bg-lightpink();
-    padding: 119px 0 120px;
-    .advantages-title {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        padding-bottom: 88px;
-        .advantages-description {
-            h2 {
-                font-size: 45px;
-                color: @dark-braun-color;
-                line-height: 1.222;
-                max-width: 488px;
-                padding-bottom: 60px;
-            }
-            p {
-                font-size: 18px;
-                font-family: "Gilroy Regular";
-                color: @dark-braun-color;
-                line-height: 1.556;
-                max-width: 400px;
-            }
-        }
-        .advantages-image {
-            img {
-                max-width: 100%;
-            }
+    padding: 155px 0 196px;
+    text-align: center;
+    .section-title {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: end;
+        &::after {
+            content: '';
+            background: url('../../assets/images/peppers/pepper_1.png') no-repeat;
+            background-position-y: center;
+            width: 60px;
+            height: 87px;
+            position: absolute;
+            right: -79px;
         }
     }
     .advantages-items {
+        padding-top: 93px;
         display: grid;
-        grid-template-columns: repeat(auto-fit, 220px);
-        grid-gap: 80px min(30px);
+        grid-template: repeat(2, 1fr) / repeat(2, 175px);
+        grid-row-gap: 92px;
+        max-width: 1000px;
+        margin: 0 auto;
         justify-content: space-between;
         .advantages-item {
-            &:hover .advantages-item-number {
-                background: @pink-color-1;
-                color: @darkred-color-2;
+            img {
+                padding-bottom: 25px;
             }
-            .advantages-item-number {
-                display: flex;
-                justify-content: center;
-                align-items: flex-end;
-                border-radius: 50%;
-                background-color: @darkred-color-2;
-                width: 70px;
-                height: 70px;
-                font-size: 60px;
-                font-family: "Gilroy ExtraBold";
-                color: @white-color;
-                line-height: 44px;
-                transition: all 400ms;
-            }
-            .advantages-item-title {
-                padding-top: 13px;
-                padding-bottom: 20px;
-                font-size: 20px;
-                font-family: "Gilroy ExtraBold";
-                color: @dark-braun-color;
-
-            }
-            .advantages-item-text {
-                font-size: 15px;
-                font-family: "Gilroy Medium";
-                color: @dark-braun-color;
-                line-height: 1.333;
+            p {
+                font-size: 14px;
+                line-height: 19px;
             }
         }
     }
 }
-
 
 /* PRODUCT */
 .products {
