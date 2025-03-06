@@ -246,7 +246,7 @@ body {
 
 /* ABOUT */
 .about {
-    padding-top: 173px;
+    padding: 173px 0 155px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -271,7 +271,7 @@ body {
 
 /* ADVANTAGES */
 .advantages {
-    padding: 155px 0 196px;
+    padding-bottom: 196px;
     text-align: center;
     .section-title {
         position: relative;
@@ -291,11 +291,25 @@ body {
     .advantages-items {
         padding-top: 93px;
         display: grid;
-        grid-template: repeat(2, 1fr) / repeat(2, 175px);
+        grid-template: repeat(2, 1fr) / 175px 1fr 175px;
+        grid-template-rows: repeat(2, 140px);
         grid-row-gap: 92px;
         max-width: 1000px;
         margin: 0 auto;
         justify-content: space-between;
+        .advantages-image {
+            position: relative;
+            top: -53px;
+            left: 40px;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            justify-self: center;
+            img {
+                width: 100%;
+            }
+        }
         .advantages-item {
             img {
                 padding-bottom: 25px;
@@ -307,6 +321,7 @@ body {
         }
     }
 }
+
 
 /* PRODUCT */
 .products {
