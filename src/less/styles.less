@@ -274,10 +274,6 @@ body {
     padding-bottom: 196px;
     text-align: center;
     .section-title {
-        position: relative;
-        display: inline-flex;
-        align-items: center;
-        justify-content: end;
         &::after {
             content: '';
             background: url('../../assets/images/peppers/pepper_1.png') no-repeat;
@@ -325,59 +321,50 @@ body {
 
 /* PRODUCT */
 .products {
-    .bg-pink();
-    padding: 120px 0 100px;
-    .container {
-        text-align: center;
-        h2 {
-            font-size: 45px;
-            color: @white-color;
-            padding-bottom: 143px;
+    padding-bottom: 173px;
+    text-align: center;
+    .section-title {
+        padding-bottom: 50px;
+    }
+    .ingredients {
+        .flex-between();
+        max-width: 410px;
+        margin: 0 auto;
+        padding-bottom: 50px;
+        .ingredient {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
         }
-        .product-items {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, 263px);
-            grid-gap: 136px 29px;
-            justify-content: center;
-            .product {
-                border: 2px solid @white-color;
-                border-radius: 20px;
-                padding: 0 19px 25px;
-                .product-image {
-                    height: 61px;
-                    position: relative;
-                    display: flex;
-                    justify-content: center;
-                    align-items: flex-end;
-                    padding-bottom: 47px;
-                    transition: all 400ms;
+    }
+    .products-items {
+        //display: flex;  // TOREMOVE
+        //flex-wrap: wrap;
+        //flex-shrink: 0;
+        //gap: 80px;
+
+        //.flex-between();
+        //gap: 80px;
+
+        .product {
+            width: 200px;
+            .product-image {
+                height: 170px;
+                .flex-center();
+                img {
+                    width: 100%;
+                    filter: drop-shadow(0 0 40px #5D0600);
                 }
-                h3 {
-                    font-size: 18px;
-                    color: @white-color;
-                    padding-bottom: 26px;
-                }
-                .product-details {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    span {
-                        font-size: 15px;
-                        font-family: "Gilroy Regular";
-                        color: @white-color;
-                        display: block;
-                        text-align: left;
-                        &:first-child {
-                            padding-bottom: 16px;
-                        }
-                    }
-                    .button-product {
-                        .button(130px, 50px, 14px);
-                    }
-                }
-                &:hover .product-image {
-                    transform: scale(1.1);
-                }
+            }
+            .product-title {
+                padding: 40px 0 14px;
+                font-family: "Formular Bold";
+                font-size: 18px;
+            }
+            .product-description {
+                font-size: 14px;
+                line-height: 19px;
             }
         }
     }
