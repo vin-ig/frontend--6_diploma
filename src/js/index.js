@@ -1,6 +1,17 @@
 const orderUrl = 'https://testologia.ru/checkout'
 
 $(document).ready(() => {
+    // Карусель
+    $(".owl-carousel").owlCarousel({
+        loop: true,
+        nav: true,
+        items: 4,
+        navText: [
+            '<div><img src="../../assets/images/icons/icon_arrow_left.png"></div>',
+            '<div><img src="../../assets/images/icons/icon_arrow_right.png"></div>'
+        ],
+    });
+
     document.getElementById('burger').onclick = function () {
         document.getElementById('menu').classList.add('open')
     }
