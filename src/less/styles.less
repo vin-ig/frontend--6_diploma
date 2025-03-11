@@ -381,25 +381,98 @@ body {
             }
         }
     }
-    .owl-carousel {
-        max-width: 1100px;
-        margin: 0 auto;
-        .owl-nav {
-            .flex-between();
+    .owl-nav {
+        top: 135px;
+    }
+
+}
+
+.owl-carousel {
+    max-width: 1100px;
+    margin: 0 auto;
+    .owl-item {
+        img {
+            width: inherit;
+        }
+    }
+    .owl-nav {
+        .flex-between();
+        position: absolute;
+        width: 100%;
+        transform: translateY(-50%);
+        z-index: -1;
+        .owl-prev {
+            position: relative;
+            left: -35px;
+        }
+        .owl-next {
+            position: relative;
+            right: -35px;
+        }
+    }
+}
+
+
+/* REVIEWS */
+.reviews {
+    padding-bottom: 169px;
+    text-align: center;
+    .section-title {
+        padding-bottom: 56px;
+        &::before {
+            content: '';
+            background: url('../../assets/images/peppers/pepper_2.png') no-repeat;
+            background-position-y: center;
+            width: 53px;
+            height: 60px;
             position: absolute;
-            top: 135px;
-            width: 100%;
-            transform: translateY(-50%);
-            z-index: -1;
-            .owl-prev {
-                position: relative;
-                left: -35px;
+            left: -73px;
+        }
+    }
+    .reviews-items {
+        text-align: left;
+        .review {
+            padding: 30px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            width: 330px;
+            height: 325px;
+            background: url("../../assets/images/review_background.png") no-repeat center;
+            .review-header {
+                display: grid;
+                grid-template: 1fr 1fr / 45px 1fr 82px;
+                .user-image {
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+                    grid-column-start: 3;
+                    width: 100%;
+                    border-radius: 50%;
+                }
+                .user-name {
+                    padding-bottom: 13px;
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                    align-self: end;
+                    font-family: "Formular Bold";
+                    font-size: 25px;
+                }
             }
-            .owl-next {
-                position: relative;
-                right: -35px;
+            .favourite_burger {
+                font-family: "Trebuchet MS Bold";
+                font-size: 14px;
+                padding-bottom: 29px;
+                p:first-child {
+                    padding-bottom: 6px;
+                }
+            }
+            .review-text {
+                font-size: 14px;
+                line-height: 19px;
             }
         }
+    }
+    .owl-nav {
+        top: 50%;
     }
 }
 
