@@ -477,6 +477,87 @@ body {
 }
 
 
+/* PROMOTION */
+.promotion {
+    padding-bottom: 171px;
+    text-align: center;
+    .section-title {
+        padding-bottom: 40px;
+    }
+    .promotion-items {
+        display: grid;
+        grid-template: repeat(2, 140px) / repeat(3, 370px);
+        gap: 30px;
+        .promotion-item {
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            &.promotion-1 {
+                background: #065311;
+                position: relative;
+                overflow: hidden;
+                padding: 11px 0 11px 11px;
+                .promo-image:first-child {
+                   .img-shadow(#65963B)
+                }
+                .promo-image:last-child {
+                    font-size: 0;
+                    position: absolute;
+                    bottom: -4px;
+                    right: 0;
+                }
+            }
+            &.promotion-2 {
+                flex-direction: column;
+                background: #3C0037;
+            }
+            &.promotion-3 {
+                background: #CE4D00;
+                grid-row-start: 1;
+                grid-row-end: span 2;
+                grid-column-start: 3;
+            }
+            &.promotion-4 {
+                background: #072F3C;
+                grid-row-start: 2;
+                grid-column-start: 1;
+                grid-column-end: span 2;
+            }
+        }
+    }
+}
+
+.formular-18 {
+    font-family: "Formular Bold";
+    font-size: 18px;
+}
+
+.formular-27 {
+    font-family: "Formular Bold";
+    font-size: 27px;
+    line-height: 23px;
+}
+
+.formular-40 {
+    font-family: "Formular Bold";
+    font-size: 40px;
+}
+
+.trebuchet-18 {
+    font-family: "Trebuchet MS";
+    font-size: 18px;
+}
+
+.trebuchet-b-18 {
+    font-family: "Trebuchet MS Bold";
+    font-size: 18px;
+}
+
+.trebuchet-b-40 {
+    font-family: "Trebuchet MS Bold";
+    font-size: 40px;
+}
+
 /* ORDER */
 .order {
     .bg-lightpink();

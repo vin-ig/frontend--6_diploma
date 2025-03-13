@@ -47,7 +47,25 @@
     justify-content: end;
 }
 
-
+.img-shadow(@color) {
+    position: relative;
+    &::before {
+        content: '';
+        width: 50%;
+        height: 50%;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 40px 40px @color;
+        z-index: 1;
+    }
+    img {
+        position: relative;
+        z-index: 2;
+    }
+}
 
 
 
