@@ -498,7 +498,7 @@ body {
                 overflow: hidden;
                 padding: 11px 0 11px 11px;
                 .promo-image:first-child {
-                   .img-shadow(#65963B)
+                   .img-shadow(40px, 40px, #65963B)
                 }
                 .promo-image:last-child {
                     font-size: 0;
@@ -509,19 +509,75 @@ body {
             }
             &.promotion-2 {
                 flex-direction: column;
+                justify-content: space-between;
+                position: relative;
                 background: #3C0037;
+                overflow: hidden;
+                .promo-text {
+                    p:first-child {
+                        padding: 23px 0 6px;
+                    }
+                }
+                .promo-images {
+                    display: flex;
+                    align-items: end;
+                    position: relative;
+                    bottom: -10px;
+                    .promo-image {
+                        .img-shadow(20px, 20px, #710030)
+                    }
+                    .promo-image:nth-child(2) {
+                        padding: 0 20px 0 15px;
+                    }
+                }
             }
             &.promotion-3 {
                 background: #CE4D00;
                 grid-row-start: 1;
                 grid-row-end: span 2;
                 grid-column-start: 3;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                overflow: hidden;
+                .promo-text {
+                    position: relative;
+                    z-index: 3;
+                    .formular-18 {
+                        padding: 25px 0 16px;
+                    }
+                    .formular-27 {
+                        padding-bottom: 20px;
+                    }
+                }
+                .promo-image {
+                    .img-shadow(40px, 60px, #eb871a);
+                    position: relative;
+                    left: -27px;
+                    bottom: 0;
+                }
             }
             &.promotion-4 {
                 background: #072F3C;
                 grid-row-start: 2;
                 grid-column-start: 1;
                 grid-column-end: span 2;
+                overflow: hidden;
+                .promo-image {
+                    .img-shadow(40px, 40px, #0389a6)
+                }
+                .promo-text {
+                    align-self: start;
+                    position: relative;
+                    z-index: 3;
+                    .trebuchet-b-18 {
+                        padding: 20px 0 10px;
+                    }
+                    .formular-27 {
+                        padding-bottom: 20px;
+                    }
+                }
             }
         }
     }
@@ -546,6 +602,7 @@ body {
 .trebuchet-18 {
     font-family: "Trebuchet MS";
     font-size: 18px;
+    line-height: 1;
 }
 
 .trebuchet-b-18 {
@@ -556,6 +613,8 @@ body {
 .trebuchet-b-40 {
     font-family: "Trebuchet MS Bold";
     font-size: 40px;
+    white-space: nowrap;
+    line-height: 1;
 }
 
 /* ORDER */

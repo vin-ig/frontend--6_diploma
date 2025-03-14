@@ -47,7 +47,7 @@
     justify-content: end;
 }
 
-.img-shadow(@color) {
+.img-shadow(@blur, @spread, @color) {
     position: relative;
     &::before {
         content: '';
@@ -58,7 +58,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        box-shadow: 0 0 40px 40px @color;
+        box-shadow: 0 0 @blur @spread @color;
         z-index: 1;
     }
     img {
