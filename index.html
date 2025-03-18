@@ -411,35 +411,41 @@
     </div>
 </section>
 
-<!--
 <section class="order" id="order">
+    <h3 class="section-title">Забронировать стол</h3>
     <div class="container">
-        <div class="order-image-berry" id="berry-1">
-            <img src="assets/images/strawberry-1.png" alt="Strawberry">
-        </div>
-        <div class="order-image-berry" id="berry-2">
-            <img src="assets/images/strawberry-2.png" alt="Strawberry">
-        </div>
-
         <div class="order-image-main">
-            <img src="assets/images/macaroons-order.png" alt="Macaroons">
+            <img src="assets/images/burger_order.png" alt="Big burger">
         </div>
         <form class="order-form">
-            <h2>Закажите макарун!</h2>
-            <p>Выберите понравившийся макарун, заполните форму и ожидайте звонка нашего пекаря!</p>
-            <h3>Ваш выбор</h3>
-            <input id="product-input" type="text" placeholder="Напишите, что хотите заказать...">
-            <div class="error-input">Введите название макарун</div>
-            <h3>Заполните данные для заказа</h3>
+            <p>Ждем тебя в BoomBurger прямо сейчас. Оформи бронь в течение 30 минут и получи напиток в подарок!</p>
+            <div class="timer">
+                <div class="timer-cell" id="hour-1">3</div>
+                <div class="timer-cell" id="hour-2">0</div>
+                <div class="timer-cell">:</div>
+                <div class="timer-cell" id="minute-1">0</div>
+                <div class="timer-cell" id="minute-2">0</div>
+                <div class="timer-label">минуты</div>
+                <div class="timer-label">секунды</div>
+            </div>
             <input id="name-input" type="text" placeholder="Ваше имя">
             <div class="error-input">Введите имя</div>
-            <input id="phone-input" type="text" placeholder="+375 (__) ___-__-__">
+            <input id="phone-input" type="text" placeholder="+7 (__) ___-__-__">
             <div class="error-input">Введите телефон</div>
-            <button type="button" class="button-order" id="submit-order">Оформить заказ</button>
+            <button type="button" class="button-order" id="submit-order">Забронировать стол</button>
+            <p>
+                Нажимая на кнопку вы подтверждаете ваше согласие с <a href="#">политикой конфиденциальности</a>
+                и обработкой персональных данных
+            </p>
         </form>
+    </div>
+
+    <div class="order-image-berry" id="berry-1">
+        <img src="assets/images/strawberry-1.png" alt="Strawberry">
     </div>
 </section>
 
+<!--
 <footer class="footer">
     <div class="container">
         <div class="logo">
