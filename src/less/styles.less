@@ -36,6 +36,18 @@ body {
     padding: 0 15px;
 }
 
+.close-button {
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    width: 13px;
+    height: 13px;
+    stroke: #706060;
+    font-size: 0;
+}
+
 
 /* HEADER */
 .header {
@@ -51,6 +63,9 @@ body {
         }
         .menu {
             padding-right: 95px;
+            .close-button {
+                display: none;
+            }
             ul {
                 list-style: none;
                 display: flex;
@@ -109,8 +124,8 @@ body {
     }
 }
 
-.close {
-    display: none;
+main {
+    position: relative;
 }
 
 
@@ -236,7 +251,7 @@ body {
         background: url("../../assets/images/fire_background.png") no-repeat;
         background-position-x: center;
         width: 100%;
-        height: 200%;
+        height: 100%;
         position: absolute;
         top: 0;
         z-index: -3;
@@ -740,20 +755,37 @@ body {
                 box-shadow: inset 0 0 30px 100px #391214, 0 0 30px 30px #391214;
             }
         }
-        .success-block {
-        border: 1px solid @darkred-color-2;
-        border-radius: 20px;
-        color: @darkred-color-1;
-        font-size: 25px;
-        line-height: 1.5;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: @white-color;
-        text-align: center;
-        padding: 60px 30px;
-        box-sizing: border-box;
     }
+}
+
+
+/* POPUP */
+.success-block {
+    .flex-center();
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(43, 38, 35, 0.8);
+    z-index: 10;
+    .popup {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 858px;
+        padding: 70px 80px 82px;
+        text-align: center;
+        background: #090000;
+        border-radius: 10px;
+        .section-title {
+            padding-bottom: 19px;
+        }
+        p {
+            font-size: 14px;
+            padding-bottom: 33px;
+        }
     }
 }
 
