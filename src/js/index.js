@@ -5,20 +5,34 @@ $(document).ready(() => {
     $(".products .owl-carousel").owlCarousel({
         loop: true,
         nav: true,
-        items: 4,
         navText: [
             '<div><img src="../../assets/images/icons/icon_arrow_left.png"></div>',
             '<div><img src="../../assets/images/icons/icon_arrow_right.png"></div>'
         ],
+        responsive: {
+            768: {
+                items: 3
+            },
+            1200: {
+                items: 4
+            }
+        },
     });
     $(".reviews .owl-carousel").owlCarousel({
         loop: true,
         nav: true,
-        items: 3,
         navText: [
             '<div><img src="../../assets/images/icons/icon_arrow_left.png"></div>',
             '<div><img src="../../assets/images/icons/icon_arrow_right.png"></div>'
         ],
+        responsive: {
+            768: {
+                items: 2
+            },
+            1100: {
+                items: 3
+            }
+        },
     });
 
     document.getElementById('burger').onclick = function () {

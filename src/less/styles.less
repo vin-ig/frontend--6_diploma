@@ -64,17 +64,15 @@ body {
     .container {
         .flex-between();
         .menu {
-            padding-right: 95px;
+            padding-right: 135px;
             .close-button {
                 display: none;
             }
             ul {
                 list-style: none;
-                display: flex;
-                justify-content: space-between;
+                .flex-between();
                 width: 630px;
                 li {
-                    padding-right: 40px;
                     a {
                         border-bottom: 2px solid transparent;
                         padding-bottom: 3px;
@@ -126,13 +124,13 @@ body {
     }
 }
 
+
+/* MAIN */
 main {
     position: relative;
 }
 
-
-/* MAIN */
-.main {
+.main-section {
     padding-top: 125px;
     .container {
         .flex-between();
@@ -263,28 +261,34 @@ main {
 
 /* ABOUT */
 .about {
-    padding: 173px 0 155px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .section-title {
-        padding-bottom: 20px;
-    }
-    p {
-        font-size: 14px;
-        line-height: 17px;
-        padding-top: 20px;
-        max-width: 550px;
-    }
-    div {
-        padding-top: 9px;
-        img {
-            filter: drop-shadow(0 0 40px @shadow-color);
+    .container {
+        padding: 173px 0 155px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .section-title {
+            padding-bottom: 20px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 17px;
+            padding-top: 20px;
+            max-width: 550px;
+        }
+
+        div {
+            padding-top: 9px;
+
+            img {
+                filter: drop-shadow(0 0 40px @shadow-color);
+                width: 100%;
+            }
         }
     }
 }
-
 
 /* ADVANTAGES */
 .advantages {
@@ -503,8 +507,9 @@ main {
     }
     .promotion-items {
         display: grid;
-        grid-template: repeat(2, 140px) / repeat(3, 370px);
-        gap: 30px;
+        grid-template: repeat(2, 140px) / repeat(3, minmax(290px, 370px));
+        justify-content: space-between;
+        gap: 30px min(20px);
         .promotion-item {
             border-radius: 10px;
             display: flex;
@@ -576,6 +581,7 @@ main {
                 }
             }
             &.promotion-4 {
+                justify-content: space-evenly;
                 background: #072F3C;
                 grid-row-start: 2;
                 grid-column-start: 1;
@@ -608,12 +614,14 @@ main {
 .formular-27 {
     font-family: "Formular Bold", sans-serif;
     font-size: 27px;
+    font-size: clamp(18px, 2vw, 27px);
     line-height: 23px;
 }
 
 .formular-40 {
     font-family: "Formular Bold", sans-serif;
     font-size: 40px;
+    font-size: clamp(18px, 3vw, 40px);
 }
 
 .trebuchet-18 {
@@ -629,7 +637,7 @@ main {
 
 .trebuchet-b-40 {
     font-family: "Trebuchet MS Bold", sans-serif;
-    font-size: 40px;
+    font-size: clamp(18px, 3vw, 40px);
     white-space: nowrap;
     line-height: 1;
 }
