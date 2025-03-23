@@ -14,6 +14,15 @@
         }
     }
 
+    .main-section {
+        .container {
+            .main-burger {
+                right: 0;
+                max-width: 50%;
+            }
+        }
+    }
+
     .owl-carousel {
         .owl-nav {
             .owl-prev {
@@ -42,6 +51,28 @@
                 ul {
                     width: 100%;
                     justify-content: space-evenly;
+                }
+            }
+        }
+    }
+
+    .main-section {
+        .container {
+            .main-info {
+                margin: 0 auto;
+                .main-description {
+                    padding-bottom: 160px;
+                }
+                .main-burger {
+                    position: relative;
+                    right: unset;
+                    top: unset;
+                    max-width: 100%;
+                }
+                .button-main {
+                    position: relative;
+                    z-index: 3;
+                    margin-top: 80px;
                 }
             }
         }
@@ -174,6 +205,39 @@
                 position: absolute;
                 top: 22px;
                 right: 16px;
+            }
+        }
+    }
+
+    .main-section {
+        text-align: center;
+        background-size: 500%;
+        background-position: -1400px -300px;
+        .container {
+            .main-info {
+                h1 {
+                    font-size: 35px;
+                    line-height: 1.2;
+                }
+                .main-description {
+                    margin: 0 auto;
+                }
+                .main-burger {
+                    .main-burger-image::before {
+                        bottom: -100px;
+                    }
+                    .main-burger-details {
+                        position: relative;
+                        right: unset;
+                        bottom: unset;
+                        margin: 0 auto;
+                        padding-top: 20px;
+                    }
+                }
+                .main-advantages {
+                    flex-direction: column;
+                    gap: 20px;
+                }
             }
         }
     }
@@ -323,6 +387,53 @@
         font-size: 25px;
     }
 
+    .main-section {
+        padding: 0 0 100px;
+        .container {
+            .main-info {
+                h1 {
+                    font-size: 25px;
+                }
+                .main-description {
+                    padding-bottom: 100px;
+                    font-size: 12px;
+                    line-height: 1.2;
+                }
+                .button-main {
+                    margin: 30px auto;
+                }
+                .main-burger {
+                    .main-burger-label {
+                        font-size: 12px;
+                        top: -50px;
+                        right: 10%;
+                        width: 80px;
+                        height: 80px;
+                    }
+                    .main-burger-price {
+                        top: unset;
+                        bottom: 115px;
+                    }
+                    .main-burger-details {
+                        h4 {
+                            font-size: 18px;
+                        }
+                        p {
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .main-advantages {
+                    .main-advantages-item {
+                        .main-advantages-item-text {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .about {
         padding-bottom: 100px;
     }
@@ -391,6 +502,19 @@
 
 /* 320 - 374 */
 @media screen and (max-width: 374px) {
+    .main-section {
+        background-position: -1000px -300px;
+        .container {
+            .main-info {
+                .main-burger {
+                    .main-burger-image::before {
+                        bottom: -70px;
+                    }
+                }
+            }
+        }
+    }
+
     .about {
         .container {
             .section-title::after {
