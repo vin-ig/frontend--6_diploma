@@ -104,9 +104,9 @@ body {
 
 .burger {
     position: relative;
-    width: 40px;
-    height: 2px;
-    background: white;
+    width: 30px;
+    height: 3px;
+    background: #b28f66;
     display: none;
     &::before, &::after {
         content: '';
@@ -116,11 +116,11 @@ body {
         background: inherit;
     }
     &::before {
-        top: -10px;
+        top: -7px;
     }
 
     &::after {
-        top: 10px;
+        top: 7px;
     }
 }
 
@@ -290,6 +290,7 @@ main {
     }
 }
 
+
 /* ADVANTAGES */
 .advantages {
     padding-bottom: 196px;
@@ -297,12 +298,7 @@ main {
     .section-title {
         &::after {
             content: '';
-            background: url('../../assets/images/peppers/pepper_1.png') no-repeat;
-            background-position-y: center;
-            width: 60px;
-            height: 87px;
-            position: absolute;
-            right: -79px;
+            .pepper-right();
         }
     }
     .advantages-items {
@@ -553,7 +549,7 @@ main {
                     }
                 }
             }
-            &.promotion-3 {
+            &.promotion-4 {
                 background: #CE4D00;
                 grid-row-start: 1;
                 grid-row-end: span 2;
@@ -580,7 +576,7 @@ main {
                     bottom: 0;
                 }
             }
-            &.promotion-4 {
+            &.promotion-3 {
                 justify-content: space-evenly;
                 background: #072F3C;
                 grid-row-start: 2;

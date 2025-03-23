@@ -10,6 +10,10 @@ $(document).ready(() => {
             '<div><img src="../../assets/images/icons/icon_arrow_right.png"></div>'
         ],
         responsive: {
+            600: {
+                items: 2,
+                slideBy: 2,
+            },
             768: {
                 items: 3
             },
@@ -26,6 +30,9 @@ $(document).ready(() => {
             '<div><img src="../../assets/images/icons/icon_arrow_right.png"></div>'
         ],
         responsive: {
+            600: {
+                items: 1
+            },
             768: {
                 items: 2
             },

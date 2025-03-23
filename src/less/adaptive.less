@@ -6,6 +6,7 @@
         .container {
             .menu {
                 padding-right: 0;
+
                 ul {
                     width: 530px;
                 }
@@ -32,10 +33,12 @@
     .header {
         .container {
             flex-wrap: wrap;
+
             .menu {
                 order: 1;
                 flex-basis: 100%;
                 place-items: center;
+
                 ul {
                     width: 100%;
                     justify-content: space-evenly;
@@ -59,6 +62,7 @@
             position: unset;
             margin: 20px auto 0;
             transform: unset;
+
             img {
                 width: 35px;
             }
@@ -69,24 +73,29 @@
         .container {
             .promotion-items {
                 grid-template: repeat(3, 140px) / repeat(2, minmax(290px, 1fr));
+
                 .promotion-item {
-                    &.promotion-3 {
+                    &.promotion-4 {
                         grid-row-start: 3;
                         grid-row-end: span 1;
                         grid-column-start: 1;
                         grid-column-end: span 2;
                         flex-direction: row;
+
                         .promo-text {
                             .formular-18 {
                                 padding: 10px 0 12px;
                             }
+
                             .formular-27 {
                                 padding-bottom: 12px;
                             }
                         }
+
                         .promo-image {
                             left: 0;
                             bottom: -25px;
+
                             img {
                                 width: 100%;
                             }
@@ -99,13 +108,209 @@
 }
 
 
-/* 540 - 767 */
+/* 630 - 767 */
 @media screen and (max-width: 767px) {
+    .advantages {
+        .advantages-items {
+            grid-template-columns: repeat(2, 175px);
+            justify-content: space-evenly;
+
+            .advantages-image {
+                grid-row-start: 3;
+                grid-column-start: 1;
+                grid-column-end: span 2;
+            }
+        }
+    }
+    .order {
+        .container {
+            .order-image-pepper {
+                display: none;
+            }
+        }
+    }
 }
 
 
-/* 425 - 539 */
-@media screen and (max-width: 539px) {
+/* 425 - 629 */
+@media screen and (max-width: 629px) {
+    .header {
+        .container {
+            display: block;
+            position: relative;
+
+            .logo {
+                margin: 0 auto;
+            }
+            .address {
+                display: none;
+            }
+
+            .menu {
+                display: none;
+                background: black;
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 20;
+                .close-button {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    padding: 26px;
+                }
+                ul {
+                    flex-direction: column;
+                    gap: 30px;
+                    padding: 60px 0 115px;
+                }
+            }
+
+            .burger {
+                display: block;
+                position: absolute;
+                top: 22px;
+                right: 16px;
+            }
+        }
+    }
+
+    .about {
+        .container {
+            .section-title::after {
+                content: '';
+                .pepper-right();
+            }
+        }
+    }
+
+    .advantages {
+        .section-title::after {
+            content: unset;
+        }
+        .advantages-items {
+            .advantages-image {
+                left: 0;
+            }
+        }
+    }
+
+    .promotion {
+        .container {
+            .promotion-items {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .promotion-item {
+                    height: 110px;
+                    &.promotion-1 {
+                        gap: 20px;
+                        //.promo-image {
+                        //    width: 85px;
+                        //    img {
+                        //        .width-100();
+                        //    }
+                        //    &:last-child {
+                        //        width: initial;
+                        //    }
+                        //}
+                        .promo-text {
+                            font-family: "Trebuchet MS Bold", sans-serif;
+                            font-size: 36px;
+                        }
+                    }
+                    &.promotion-2 {
+                        .promo-text {
+                            z-index: 1;
+                            .formular-27 {
+                                font-size: 18px;
+                                padding-top: 10px;
+                            }
+                            .trebuchet-18 {
+                                font-size: 14px;
+                            }
+                        }
+                        .promo-images {
+                            transform: scale(0.9);
+                            bottom: 0;
+                        }
+                    }
+                    &.promotion-3 {
+                        align-items: center;
+                        .promo-image {
+                            max-width: 95px;
+                            order: 1;
+                            img {
+                                .width-100();
+                            }
+                        }
+                        .promo-text {
+                            align-self: auto;
+                            .trebuchet-b-18 {
+                                display: none;
+                            }
+                            .formular-27 {
+                                padding-bottom: 0;
+                            }
+                            .trebuchet-b-40 {
+                                font-size: 36px;
+                            }
+                        }
+                    }
+                    &.promotion-4 {
+                        flex-direction: column;
+                        .promo-text {
+                            width: 95%;
+                            .formular-18 {
+                                display: none;
+                            }
+                            .formular-27 {
+                                padding-top: 16px;
+                                &::before {
+                                    content: 'Набор ';
+                                }
+                            }
+                            .trebuchet-b-40 {
+                                display: flex;
+                                justify-content: space-between;
+                                .trebuchet-b-18 {
+                                    display: none;
+                                }
+                            }
+                        }
+                        .promo-image {
+                            width: 110%;
+                            left: -15px;
+                            bottom: 30px;
+                            img {
+                                .width-100();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .order {
+        .container {
+            .order-container {
+                .order-image-main {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .footer {
+        .container {
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
 }
 
 
