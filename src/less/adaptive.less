@@ -112,7 +112,7 @@
 @media screen and (max-width: 767px) {
     .advantages {
         .advantages-items {
-            grid-template-columns: repeat(2, 175px);
+            grid-template-columns: repeat(2, minmax(140px, 175px));
             justify-content: space-evenly;
 
             .advantages-image {
@@ -183,6 +183,9 @@
             .section-title::after {
                 content: '';
                 .pepper-right();
+            }
+            div {
+                padding-top: 30px;
             }
         }
     }
@@ -316,9 +319,95 @@
 
 /* 375 - 424 */
 @media screen and (max-width: 424px) {
+    .section-title {
+        font-size: 25px;
+    }
+
+    .about {
+        padding-bottom: 100px;
+    }
+
+    .advantages {
+        padding-bottom: 100px;
+        .advantages-items {
+            padding-top: 45px;
+            grid-row-gap: 30px;
+        }
+    }
+
+    .products {
+        padding-bottom: 100px;
+        .section-title {
+            &::before {
+                content: '';
+                .pepper-left();
+            }
+        }
+    }
+
+    .reviews {
+        padding-bottom: 100px;
+        .section-title {
+            &::before {
+                content: unset;
+            }
+        }
+    }
+
+    .promotion {
+        padding-bottom: 100px;
+        .container {
+            .promotion-items {
+                .promotion-item {
+                    &.promotion-1 {
+                        .promo-image {
+                            max-width: 95px;
+                            img {
+                                .width-100();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .order {
+        .container {
+            .order-container {
+                display: block;
+                .order-form {
+                    padding: 0;
+                    text-align: center;
+                    .flex-center();
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+
 }
 
 
 /* 320 - 374 */
 @media screen and (max-width: 374px) {
+    .about {
+        .container {
+            .section-title::after {
+                width: 38px;
+                right: -44px;
+                background-size: contain;
+            }
+        }
+    }
+
+    .products {
+        .container {
+            .section-title::before {
+                width: 30px;
+                background-size: contain;
+                left: -47px;
+            }
+        }
+    }
 }

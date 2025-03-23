@@ -261,8 +261,8 @@ main {
 
 /* ABOUT */
 .about {
+    padding: 173px 0 155px;
     .container {
-        padding: 173px 0 155px;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -306,7 +306,7 @@ main {
         display: grid;
         grid-template: repeat(2, 1fr) / 175px 1fr 175px;
         grid-template-rows: repeat(2, 140px);
-        grid-row-gap: 92px;
+        grid-gap: 92px min(10px);
         max-width: 1000px;
         margin: 0 auto;
         justify-content: space-between;
@@ -438,12 +438,7 @@ main {
         padding-bottom: 56px;
         &::before {
             content: '';
-            background: url('../../assets/images/peppers/pepper_2.png') no-repeat;
-            background-position-y: center;
-            width: 53px;
-            height: 60px;
-            position: absolute;
-            left: -73px;
+            .pepper-left();
         }
     }
     .reviews-items {
