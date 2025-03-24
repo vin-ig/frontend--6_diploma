@@ -42,6 +42,12 @@ $(document).ready(() => {
         },
     });
 
+    // WOW.js
+    new WOW({
+        animateClass: 'animate__animated',
+        offset: 300,
+    }).init()
+
     document.getElementById('burger').onclick = function () {
         document.getElementById('menu').classList.add('open')
     }

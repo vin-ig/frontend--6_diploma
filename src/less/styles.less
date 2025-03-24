@@ -760,7 +760,7 @@ main {
         }
         .order-image-pepper {
             position: absolute;
-            //animation: berry-move infinite ease-in-out alternate;
+            animation: pepper-move 3s infinite ease-in-out alternate;
             right: -13px;
             bottom: 77px;
             &::before {
@@ -834,22 +834,7 @@ main {
 
 
 /* ANIMATIONS */
-@keyframes pulse {
-    from {
-        transform: scale(0.2);
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    to {
-        transform: scale(1);
-        opacity: 0;
-    }
-}
-
-@keyframes berry-move {
+@keyframes pepper-move {
     from {
         transform: translateY(-20px);
     }
