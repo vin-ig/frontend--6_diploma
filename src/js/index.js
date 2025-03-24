@@ -42,24 +42,40 @@ $(document).ready(() => {
         },
     });
 
+    
     // WOW.js
     new WOW({
         animateClass: 'animate__animated',
         offset: 300,
     }).init()
 
-    document.getElementById('burger').onclick = function () {
-        document.getElementById('menu').classList.add('open')
-    }
 
+    // Работа с меню в мобильной версии
+    let menu = document.getElementById('menu')
+    let address = document.getElementById('address')
+    document.getElementById('burger').onclick = function () {
+        menu.classList.add('open')
+        address.style.display = 'flex'
+        menu.append(address)
+    }
     document.querySelectorAll('#menu *').forEach((item) => {
-        item.onclick = () => {
-            document.getElementById('menu').classList.remove('open');
-        }
+        item.onclick = () => closePopup('menu')
     })
 
 
+    // Плавная прокрутка
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+
+    // Обработка формы
     $('#submit-order').click(() => {
+        const nameInput = $('#name-input')
+        const phoneInput = $('#phone-input')
         const loader = $('.loader')
         $('.error-input').css({visibility: 'hidden'})
         let hasError = false
@@ -81,25 +97,27 @@ $(document).ready(() => {
                 method: 'POST',
                 url: orderUrl,
                 data: {
-                    product: $('#product-input').val(),
-                    name: $('#name-input').val(),
-                    phone: $('#phone-input').val(),
+                    name: nameInput.val(),
+                    phone: phoneInput.val(),
                 }
             }).done((message) => {
                 loader.hide()
                 if (message.success) {
-                    let form = $('.order-form')
-                    form.hide()
-                    let successBlock = $('<div class="success-block">Спасибо за Ваш заказ. Мы скоро свяжемся с Вами!</div>')
-                    successBlock.css({
-                        width: form.width(),
-                        // height: form.height(),  // Выглядит некрасиво, поэтому высоту не трогаем
-                    })
-                    form.after(successBlock)
+                    $('#success-block').addClass('open')
+                    nameInput.val('')
+                    phoneInput.val('')
                 } else {
                     alert('Возникла ошибка при оформлении заказа, позвоните нам и сделайте заказ')
                 }
             })
         }
     })
+
+    // Закрываем всплывающее окно
+    $('.close-button').click(() => closePopup('success-block'))
 })
+
+
+function closePopup(elemId) {
+    document.getElementById(elemId).classList.remove('open')
+}

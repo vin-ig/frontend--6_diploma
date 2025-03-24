@@ -729,7 +729,6 @@ main {
                     padding: 0 20px;
                     box-sizing: border-box;
                     outline: none;
-                    margin-bottom: 18px;
 
                     &::placeholder {
                         color: #fdb15b;
@@ -737,9 +736,10 @@ main {
                 }
 
                 .error-input {
-                    display: none;
+                    visibility: hidden;
                     color: @red-color;
-                    padding: 5px 0 10px 25px;
+                    padding: 5px 0 10px;
+                    font-size: 12px;
                 }
 
                 .button-order {
