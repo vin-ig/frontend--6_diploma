@@ -42,7 +42,31 @@ $(document).ready(() => {
         },
     });
 
-    
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 2,
+                slidesPerColumn: 2,
+                slidesPerColumnFill: 'row',
+                spaceBetween: 10
+            },
+            769: {
+                slidesPerView: 3,
+                spaceBetween: 15
+            },
+            1025: {
+                slidesPerView: 4,
+                spaceBetween: 20
+            }
+        }
+    });
+
     // WOW.js
     new WOW({
         animateClass: 'animate__animated',
@@ -67,12 +91,12 @@ $(document).ready(() => {
 
 
     // Плавная прокрутка
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', e => {
-                e.preventDefault();
-                document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', e => {
+            e.preventDefault();
+            document.querySelector(anchor.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
         });
+    });
 
 
     // Обработка формы
