@@ -52,14 +52,17 @@ $(document).ready(() => {
 
     // Работа с меню в мобильной версии
     let menu = document.getElementById('menu')
-    let address = document.getElementById('address')
+    let address = document.getElementById('address').cloneNode(true)
     document.getElementById('burger').onclick = function () {
         menu.classList.add('open')
         address.style.display = 'flex'
         menu.append(address)
     }
     document.querySelectorAll('#menu *').forEach((item) => {
-        item.onclick = () => closePopup('menu')
+        item.onclick = () => {
+            closePopup('menu')
+            menu.removeChild(address)
+        }
     })
 
 
