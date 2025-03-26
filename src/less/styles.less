@@ -471,20 +471,26 @@ main {
     padding: 0 72px;
 
     .swiper-buttons {
-        .swiper-button-next,
-        .swiper-button-prev {
-            all: unset;
-            cursor: pointer;
-            &::after {
-                content: unset;
-            }
-        }
-        .flex-between();
         position: absolute;
         width: 100%;
         left: 0;
         transform: translateY(-50%);
-        z-index: -1;
+        z-index: 2;
+        .swiper-button-next,
+        .swiper-button-prev {
+            all: unset;
+            cursor: pointer;
+            position: absolute;
+            &::after {
+                content: unset;
+            }
+        }
+        .swiper-button-prev {
+            left: 0;
+        }
+        .swiper-button-next {
+            right: 0;
+        }
     }
 }
 
