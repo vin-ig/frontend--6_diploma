@@ -160,6 +160,21 @@
             }
         }
     }
+    .swiper {
+        padding: 0;
+        .swiper-buttons {
+            width: 80px;
+            position: unset;
+            margin: 20px auto 0;
+            transform: unset;
+
+            img {
+                width: 35px;
+            }
+        }
+    }
+
+
 }
 
 
@@ -267,6 +282,27 @@
         .advantages-items {
             .advantages-image {
                 left: 0;
+            }
+        }
+    }
+
+    .products {
+        .container {
+            .products-items {
+                .product {
+                    .product-image {
+                        img {
+                            max-width: 150px;
+                        }
+                    }
+                    .product-title {
+                        font-size: 16px;
+                        padding: 15px 0;
+                    }
+                    .product-description {
+                        font-size: 12px;
+                    }
+                }
             }
         }
     }
@@ -458,6 +494,15 @@
             &::before {
                 content: '';
                 .pepper-left();
+            }
+        }
+        .products-items {
+            .product {
+                .product-image {
+                    img {
+                        width: 120px;
+                    }
+                }
             }
         }
     }

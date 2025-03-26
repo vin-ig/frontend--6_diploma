@@ -44,25 +44,25 @@ $(document).ready(() => {
 
     const swiper = new Swiper('.swiper', {
         loop: true,
-        spaceBetween: 10,
+        spaceBetween: 75,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
         breakpoints: {
             320: {
+                grid: {
+                    rows: 2,
+                    fill: 'row',
+                },
                 slidesPerView: 2,
-                slidesPerColumn: 2,
-                slidesPerColumnFill: 'row',
-                spaceBetween: 10
+                spaceBetween: 30,
             },
-            769: {
+            768: {
                 slidesPerView: 3,
-                spaceBetween: 15
             },
-            1025: {
+            1024: {
                 slidesPerView: 4,
-                spaceBetween: 20
             }
         }
     });
