@@ -16,6 +16,7 @@ $(document).ready(() => {
                     fill: 'row',
                 },
                 slidesPerView: 2,
+                slidesPerGroup: 2,
                 spaceBetween: 30,
             },
             768: {
@@ -41,6 +42,7 @@ $(document).ready(() => {
                     fill: 'row',
                 },
                 slidesPerView: 1,
+                slidesPerGroup: 3,
                 spaceBetween: 20,
             },
             630: {

@@ -523,7 +523,6 @@ main {
             margin: 0 auto;
             box-sizing: border-box;
             width: 330px;
-            //min-height: 325px;
             height: auto;
             background: url("../../assets/images/review_background.png") no-repeat center;
             background-size: cover;
@@ -531,6 +530,16 @@ main {
             .review-header {
                 display: grid;
                 grid-template: 1fr 1fr / 45px 1fr 82px;
+
+                a {
+                    cursor: unset;
+                    img {
+                        cursor: pointer;
+                        &:hover {
+                            opacity: 0.9;
+                        }
+                    }
+                }
 
                 .user-image {
                     grid-row-start: 1;
@@ -929,6 +938,11 @@ main {
             .flex-between();
             .font-size-0();
             width: 147px;
+            div {
+                a:hover {
+                    opacity: 0.9;
+                }
+            }
         }
     }
 }
