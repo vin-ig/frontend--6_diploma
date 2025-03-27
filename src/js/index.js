@@ -2,6 +2,7 @@ const orderUrl = 'https://testologia.ru/checkout'
 
 $(document).ready(() => {
     // Слайдер
+    /*
     const productSwiper = new Swiper('.products-items.swiper', {
         loop: true,
         spaceBetween: 75,
@@ -65,7 +66,7 @@ $(document).ready(() => {
         animateClass: 'animate__animated',
         offset: 300,
     }).init()
-
+     */
 
     // Работа с меню в мобильной версии
     let menu = document.getElementById('menu')
@@ -84,7 +85,7 @@ $(document).ready(() => {
         }
     })
 
-
+/*
     // Плавная прокрутка
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', e => {
@@ -182,6 +183,8 @@ $(document).ready(() => {
         $(document.getElementById(ingredientId)).addClass('active')
         $(document.getElementById(ingredientId.split('-')[1])).addClass('active')
     })
+
+ */
 })
 
 
