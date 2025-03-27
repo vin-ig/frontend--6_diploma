@@ -172,9 +172,47 @@ $(document).ready(() => {
 
     // Закрываем всплывающее окно
     $('.close-button').click(() => closePopup('success-block'))
+
+    // Обратный отсчет в форме заказа
+    timer(min=30, sec=0)
 })
 
 
 function closePopup(elemId) {
     document.getElementById(elemId).classList.remove('open')
+}
+
+
+function timer(min, sec) {
+    let timeDelta = (min * 60 + sec) * 1000
+    let minute1 = $('#minute-1')
+    let minute2 = $('#minute-2')
+    let second1 = $('#second-1')
+    let second2 = $('#second-2')
+    const timerInterval = setInterval(() => {
+        if (timeDelta == 0) {
+            clearInterval(timerInterval);
+            $('.timer-cell').css({
+                color: 'gray',
+                boxShadow: '0 0 5px 1px red',
+            })
+        }
+        let time = getTimeFromDelta(timeDelta)
+        minute1.text(Math.floor(time.min / 10))
+        minute2.text(time.min % 10)
+        second1.text(Math.floor(time.sec / 10))
+        second2.text(time.sec % 10)
+        timeDelta -= 1000
+    }, 1000)
+}
+
+function getTimeFromDelta(timedelta) {
+    let totalSeconds = timedelta / 1000
+    let minutes = Math.floor(totalSeconds / 60)
+    let seconds = totalSeconds % 60
+
+    return {
+        min: minutes,
+        sec: seconds
+    }
 }
