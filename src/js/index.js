@@ -59,6 +59,7 @@ $(document).ready(() => {
             }
         }
     });
+     */
 
 
     // WOW.js
@@ -66,7 +67,6 @@ $(document).ready(() => {
         animateClass: 'animate__animated',
         offset: 300,
     }).init()
-     */
 
     // Работа с меню в мобильной версии
     let menu = document.getElementById('menu')
