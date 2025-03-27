@@ -163,6 +163,25 @@ $(document).ready(() => {
 
     // Обратный отсчет в форме заказа
     timer(min = 30, sec = 0)
+
+
+    // Переключение вкладок в "Меню"
+    const productTab = $('.ingredient')
+    const productSlider = $('.products-items')
+    productTab.click((event) => {
+        let clickedElem = $(event.target)
+        let ingredientId = clickedElem.attr('id')
+        while (!ingredientId) {
+            clickedElem = clickedElem.parent()
+            ingredientId = clickedElem.attr('id')
+        }
+
+        productTab.removeClass('active')
+        productSlider.removeClass('active')
+
+        $(document.getElementById(ingredientId)).addClass('active')
+        $(document.getElementById(ingredientId.split('-')[1])).addClass('active')
+    })
 })
 
 

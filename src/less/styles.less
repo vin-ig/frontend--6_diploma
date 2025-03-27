@@ -439,10 +439,21 @@ main {
             flex-direction: column;
             align-items: center;
             gap: 16px;
+            cursor: pointer;
+            transition: all 300ms;
+            &:hover img {
+                transform: scale(1.05);
+            }
+            &.active {
+                img {
+                    filter: drop-shadow(0 0 10px yellow);
+                }
+            }
         }
     }
 
     .products-items {
+        display: none;
         padding: 50px 72px 0;
         .product {
             width: 200px;
@@ -455,7 +466,6 @@ main {
                 .flex-center();
 
                 img {
-                    //width: 100%;
                     filter: drop-shadow(0 0 35px @shadow-color);
                 }
             }
@@ -492,6 +502,9 @@ main {
         }
         .swiper-buttons {
             top: 135px;
+        }
+        &.active {
+            display: block;
         }
     }
 }

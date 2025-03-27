@@ -139,24 +139,82 @@
         <div class="container">
             <h3 class="section-title">Меню</h3>
             <div class="ingredients">
-                <div class="ingredient">
+                <div class="ingredient active" id="tab-chicken">
                     <img src="assets/images/icons/icon_chicken.png" alt="цыпленок">
                     <span>цыпленок</span>
                 </div>
-                <div class="ingredient">
+                <div class="ingredient" id="tab-cow">
                     <img src="assets/images/icons/icon_cow.png" alt="говядина">
                     <span>говядина</span>
                 </div>
-                <div class="ingredient">
+                <div class="ingredient" id="tab-duck">
                     <img src="assets/images/icons/icon_duck.png" alt="утка">
                     <span>утка</span>
                 </div>
-                <div class="ingredient">
+                <div class="ingredient" id="tab-crab">
                     <img src="assets/images/icons/icon_crab.png" alt="краб">
                     <span>краб</span>
                 </div>
             </div>
-            <div class="products-items swiper">
+            <div class="products-items swiper active" id="chicken">
+                <div class="swiper-wrapper">
+                    <div class="product swiper-slide">
+                        <div class="product-image">
+                            <img src="assets/images/products/product_7.png" alt="Бургер">
+                        </div>
+                        <h4 class="product-title">Чикен Хрустяш</h4>
+                        <p class="product-description">
+                            Куриная котлета в панировке, перец халапеньо, авокадо, сыр монтерей джек, салат айсберг,
+                            чипотле-майонез, кукурузная булочка
+                        </p>
+                    </div>
+                    <div class="product swiper-slide">
+                        <div class="product-image">
+                            <img src="assets/images/products/product_3.png" alt="Бургер">
+                        </div>
+                        <h4 class="product-title">Куриный Чизмастер</h4>
+                        <p class="product-description">
+                            Куриная котлета гриль, плавленый сыр чеддер, хрустящий бекон, листья салата айсберг,
+                            помидор, соус барбекю, бриошевая булочка
+                        </p>
+                    </div>
+                    <div class="product swiper-slide">
+                        <div class="product-image">
+                            <img src="assets/images/products/product_7.png" alt="Бургер">
+                        </div>
+                        <h4 class="product-title">Спайси Чикен</h4>
+                        <p class="product-description">
+                            Острая куриная котлета в панировке, сырный соус, маринованные огурчики, красный лук,
+                            руккола, соус чили, чёрная булочка с кунжутом
+                        </p>
+                    </div>
+                    <div class="product swiper-slide">
+                        <div class="product-image">
+                            <img src="assets/images/products/product_9.png" alt="Бургер">
+                        </div>
+                        <h4 class="product-title">Цезарь Бургер</h4>
+                        <p class="product-description">
+                            Куриное филе гриль, пармезан, листья романо, соус "Цезарь", вяленые томаты, чесночные
+                            крутоны, классическая булочка
+                        </p>
+                    </div>
+                    <div class="product swiper-slide">
+                        <div class="product-image">
+                            <img src="assets/images/products/product_1.png" alt="Бургер">
+                        </div>
+                        <h4 class="product-title">Азиатский Цыплёнок</h4>
+                        <p class="product-description">
+                            Куриная котлета в терияки, ананас гриль, морковь по-корейски, зелёный лук, кунжут, соус
+                            унаги, булочка с чёрным кунжутом
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-buttons">
+                    <div class="swiper-button-prev"><img src="../../assets/images/icons/icon_arrow_left.png"></div>
+                    <div class="swiper-button-next"><img src="../../assets/images/icons/icon_arrow_right.png"></div>
+                </div>
+            </div>
+            <div class="products-items swiper" id="cow">
                 <div class="swiper-wrapper">
                     <div class="product swiper-slide">
                         <div class="product-image">
@@ -218,16 +276,6 @@
                     </div>
                     <div class="product swiper-slide">
                         <div class="product-image">
-                            <img src="assets/images/products/product_7.png" alt="Бургер">
-                        </div>
-                        <h4 class="product-title">Острый мексиканец</h4>
-                        <p class="product-description">
-                            Куриная котлета в панировке, перец халапеньо, авокадо, сыр монтерей джек, салат айсберг,
-                            чипотле-майонез, кукурузная булочка
-                        </p>
-                    </div>
-                    <div class="product swiper-slide">
-                        <div class="product-image">
                             <img src="assets/images/products/product_8.png" alt="Бургер">
                         </div>
                         <h4 class="product-title">Лесной охотник</h4>
@@ -236,26 +284,119 @@
                             булочка
                         </p>
                     </div>
+                </div>
+                <div class="swiper-buttons">
+                    <div class="swiper-button-prev"><img src="../../assets/images/icons/icon_arrow_left.png"></div>
+                    <div class="swiper-button-next"><img src="../../assets/images/icons/icon_arrow_right.png"></div>
+                </div>
+            </div>
+            <div class="products-items swiper" id="duck">
+                <div class="swiper-wrapper">
+                    <div class="product swiper-slide">
+                        <div class="product-image">
+                            <img src="assets/images/products/product_5.png" alt="Бургер">
+                        </div>
+                        <h4 class="product-title">Утка по-пекински</h4>
+                        <p class="product-description">
+                            Утиная грудка конфи, апельсиновый мармелад, огурцы, зелёный лук, хрустящие блинчики вместо
+                            булки, соус хоisin, кунжут.
+                        </p>
+                    </div>
+                    <div class="product swiper-slide">
+                        <div class="product-image">
+                            <img src="assets/images/products/product_6.png" alt="Бургер">
+                        </div>
+                        <h4 class="product-title">Черри Дак</h4>
+                        <p class="product-description">
+                            Утиная котлета гриль, вишнёвый соус, сыр бри, руккола, груша гриль, грецкий орех, ржаная
+                            булочка
+                        </p>
+                    </div>
+                    <div class="product swiper-slide">
+                        <div class="product-image">
+                            <img src="assets/images/products/product_1.png" alt="Бургер">
+                        </div>
+                        <h4 class="product-title">Утиный Гурман</h4>
+                        <p class="product-description">
+                            Утка medium rare, трюфельный майонез, пармезан, вяленые томаты, микрозелень, чёрная
+                            булочка с золотой солью
+                        </p>
+                    </div>
                     <div class="product swiper-slide">
                         <div class="product-image">
                             <img src="assets/images/products/product_9.png" alt="Бургер">
                         </div>
-                        <h4 class="product-title">Средиземноморский бриз</h4>
+                        <h4 class="product-title">Азиатская Утка</h4>
                         <p class="product-description">
-                            Рыбная котлета из тунца, соус песто, томат, артишоки, салат романо, лимонный майонез,
-                            булочка с
-                            оливками
+                            Утиная котлета в соусе терияки, морковь по-корейски, кунжут, острый майонез, листья шпината,
+                            булочка с имбирём
+                        </p>
+                    </div>
+                    <div class="product swiper-slide">
+                        <div class="product-image">
+                            <img src="assets/images/products/product_3.png" alt="Бургер">
+                        </div>
+                        <h4 class="product-title">Фуа-гра Бургер</h4>
+                        <p class="product-description">
+                            Утиная котлета, фуа-гра (паштет), инжирный джем, руккола, грецкие орехи, бальзамический
+                            крем, бриошевая булочка
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-buttons">
+                    <div class="swiper-button-prev"><img src="../../assets/images/icons/icon_arrow_left.png"></div>
+                    <div class="swiper-button-next"><img src="../../assets/images/icons/icon_arrow_right.png"></div>
+                </div>
+            </div>
+            <div class="products-items swiper" id="crab">
+                <div class="swiper-wrapper">
+                    <div class="product swiper-slide">
+                        <div class="product-image">
+                            <img src="assets/images/products/product_7.png" alt="Бургер">
+                        </div>
+                        <h4 class="product-title">Крабби Бургер</h4>
+                        <p class="product-description">
+                            Крабовая котлета, авокадо, манго-сальса, руккола, лимонный айоли, чиабатта
+                        </p>
+                    </div>
+                    <div class="product swiper-slide">
+                        <div class="product-image">
+                            <img src="assets/images/products/product_5.png" alt="Бургер">
+                        </div>
+                        <h4 class="product-title">Черри Лосось</h4>
+                        <p class="product-description">
+                            Лососевая котлета гриль, вишнёвый соус, спаржа гриль, сыр филадельфия, микрозелень, чёрная
+                            булочка
+                        </p>
+                    </div>
+                    <div class="product swiper-slide">
+                        <div class="product-image">
+                            <img src="assets/images/products/product_8.png" alt="Бургер">
+                        </div>
+                        <h4 class="product-title">Креветка Гриль</h4>
+                        <p class="product-description">
+                            Креветочные котлеты (2 шт.), соус "Ранч" с лаймом, авокадо, помидор, красный лук, булочка с
+                            чесночным маслом
+                        </p>
+                    </div>
+                    <div class="product swiper-slide">
+                        <div class="product-image">
+                            <img src="assets/images/products/product_6.png" alt="Бургер">
+                        </div>
+                        <h4 class="product-title">Чёрный Осьминог</h4>
+                        <p class="product-description">
+                            Котлета из осьминога гриль, чёрный чесночный соус, микс салатов, вяленые томаты, лимонный
+                            айоли, чёрная булочка с кунжутом
                         </p>
                     </div>
                     <div class="product swiper-slide">
                         <div class="product-image">
                             <img src="assets/images/products/product_10.png" alt="Бургер">
                         </div>
-                        <h4 class="product-title">Веганский рай</h4>
+                        <h4 class="product-title">Спайси Туна</h4>
                         <p class="product-description">
-                            Котлета из нута и киноа, авокадо, баклажан, руккола, вяленые томаты, тахини-соус,
-                            цельнозерновая
-                            булочка
+                            Котлета из тунца с редкой прожаркой, васаби-майонез, имбирь, огурец, нори (водоросли),
+                            рисовая булочка
                         </p>
                     </div>
                 </div>
