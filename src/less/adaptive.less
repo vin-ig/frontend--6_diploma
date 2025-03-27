@@ -452,6 +452,15 @@
     .order {
         .container {
             .order-container {
+                display: block;
+
+                .order-form {
+                    padding: 0;
+                    text-align: center;
+                    .flex-center();
+                    flex-direction: column;
+                }
+
                 .order-image-main {
                     display: none;
                 }
@@ -630,21 +639,6 @@
                             }
                         }
                     }
-                }
-            }
-        }
-    }
-
-    .order {
-        .container {
-            .order-container {
-                display: block;
-
-                .order-form {
-                    padding: 0;
-                    text-align: center;
-                    .flex-center();
-                    flex-direction: column;
                 }
             }
         }
