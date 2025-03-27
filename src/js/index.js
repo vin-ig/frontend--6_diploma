@@ -42,7 +42,7 @@ $(document).ready(() => {
         },
     });
 
-    const swiper = new Swiper('.swiper', {
+    const productSwiper = new Swiper('.products-items.swiper', {
         loop: true,
         spaceBetween: 75,
         navigation: {
@@ -63,6 +63,36 @@ $(document).ready(() => {
             },
             1024: {
                 slidesPerView: 4,
+            }
+        }
+    });
+
+    const reviewSwiper = new Swiper('.reviews-items.swiper', {
+        loop: true,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            320: {
+                grid: {
+                    rows: 3,
+                    fill: 'row',
+                },
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            630: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 70,
+            },
+            1024: {
+                slidesPerView: 3,
             }
         }
     });

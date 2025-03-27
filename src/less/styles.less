@@ -388,6 +388,36 @@ main {
 }
 
 
+/* SWIPER */
+.swiper {
+    max-width: 100%;
+    margin: 0 auto;
+
+    .swiper-buttons {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: 2;
+        .swiper-button-next,
+        .swiper-button-prev {
+            all: unset;
+            cursor: pointer;
+            position: absolute;
+            &::after {
+                content: unset;
+            }
+        }
+        .swiper-button-prev {
+            left: 0;
+        }
+        .swiper-button-next {
+            right: 0;
+        }
+    }
+}
+
+
 /* PRODUCT */
 .products {
     padding-bottom: 173px;
@@ -411,7 +441,7 @@ main {
     }
 
     .products-items {
-        padding-top: 50px;
+        padding: 50px 72px 0;
         .product {
             width: 200px;
             margin: 0 auto;
@@ -464,36 +494,6 @@ main {
     }
 }
 
-.swiper {
-    //max-width: 1025px;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 72px;
-
-    .swiper-buttons {
-        position: absolute;
-        width: 100%;
-        left: 0;
-        transform: translateY(-50%);
-        z-index: 2;
-        .swiper-button-next,
-        .swiper-button-prev {
-            all: unset;
-            cursor: pointer;
-            position: absolute;
-            &::after {
-                content: unset;
-            }
-        }
-        .swiper-button-prev {
-            left: 0;
-        }
-        .swiper-button-next {
-            right: 0;
-        }
-    }
-}
-
 .owl-carousel {
     max-width: 1100px;
     margin: 0 auto;
@@ -540,14 +540,20 @@ main {
 
     .reviews-items {
         text-align: left;
+        padding: 0 60px;
+        .swiper-buttons {
+            top: 50%;
+        }
 
         .review {
             padding: 30px;
             margin: 0 auto;
             box-sizing: border-box;
             width: 330px;
-            height: 325px;
+            //min-height: 325px;
+            height: auto;
             background: url("../../assets/images/review_background.png") no-repeat center;
+            background-size: cover;
 
             .review-header {
                 display: grid;
