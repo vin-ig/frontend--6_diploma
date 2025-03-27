@@ -85,7 +85,7 @@ $(document).ready(() => {
         }
     })
 
-/*
+
     // Плавная прокрутка
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', e => {
@@ -183,8 +183,6 @@ $(document).ready(() => {
         $(document.getElementById(ingredientId)).addClass('active')
         $(document.getElementById(ingredientId.split('-')[1])).addClass('active')
     })
-
- */
 })
 
 
