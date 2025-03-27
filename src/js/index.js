@@ -1,66 +1,6 @@
 const orderUrl = 'https://testologia.ru/checkout'
 
 $(document).ready(() => {
-    // Слайдер
-    /*
-    const productSwiper = new Swiper('.products-items.swiper', {
-        loop: true,
-        spaceBetween: 75,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            320: {
-                grid: {
-                    rows: 2,
-                    fill: 'row',
-                },
-                slidesPerView: 2,
-                slidesPerGroup: 2,
-                spaceBetween: 30,
-            },
-            768: {
-                slidesPerView: 3,
-            },
-            1024: {
-                slidesPerView: 4,
-            }
-        }
-    });
-
-    const reviewSwiper = new Swiper('.reviews-items.swiper', {
-        loop: true,
-        spaceBetween: 30,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            320: {
-                grid: {
-                    rows: 3,
-                    fill: 'row',
-                },
-                slidesPerView: 1,
-                slidesPerGroup: 3,
-                spaceBetween: 20,
-            },
-            630: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 70,
-            },
-            1024: {
-                slidesPerView: 3,
-            }
-        }
-    });
-     */
-
 
     // WOW.js
     new WOW({
@@ -183,6 +123,65 @@ $(document).ready(() => {
         $(document.getElementById(ingredientId)).addClass('active')
         $(document.getElementById(ingredientId.split('-')[1])).addClass('active')
     })
+
+
+    // Слайдер
+    const productSwiper = new Swiper('.products-items.swiper', {
+        loop: true,
+        spaceBetween: 75,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            320: {
+                grid: {
+                    rows: 2,
+                    fill: 'row',
+                },
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+                spaceBetween: 30,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4,
+            }
+        }
+    });
+
+    const reviewSwiper = new Swiper('.reviews-items.swiper', {
+        loop: true,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            320: {
+                grid: {
+                    rows: 3,
+                    fill: 'row',
+                },
+                slidesPerView: 1,
+                slidesPerGroup: 3,
+                spaceBetween: 20,
+            },
+            630: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 70,
+            },
+            1024: {
+                slidesPerView: 3,
+            }
+        }
+    });
 })
 
 
