@@ -911,11 +911,14 @@ main {
     z-index: 10;
 
     .popup {
+        .flex-center();
+        flex-direction: column;
         position: fixed;
         top: 50%;
         transform: translateY(-50%);
         max-width: 858px;
         padding: 70px 80px 82px;
+        margin: 0 20px;
         text-align: center;
         background: #090000;
         border-radius: 10px;
@@ -927,6 +930,11 @@ main {
         p {
             font-size: 14px;
             padding-bottom: 33px;
+        }
+        .success-image {
+            img {
+                .width-100();
+            }
         }
     }
 }
