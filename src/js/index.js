@@ -1,47 +1,7 @@
 const orderUrl = 'https://testologia.ru/checkout'
 
 $(document).ready(() => {
-    // Карусель
-    $(".products .owl-carousel").owlCarousel({
-        loop: true,
-        nav: true,
-        navText: [
-            '<div><img src="../../assets/images/icons/icon_arrow_left.png"></div>',
-            '<div><img src="../../assets/images/icons/icon_arrow_right.png"></div>'
-        ],
-        responsive: {
-            600: {
-                items: 2,
-                slideBy: 2,
-            },
-            768: {
-                items: 3
-            },
-            1200: {
-                items: 4
-            }
-        },
-    });
-    $(".reviews .owl-carousel").owlCarousel({
-        loop: true,
-        nav: true,
-        navText: [
-            '<div><img src="../../assets/images/icons/icon_arrow_left.png"></div>',
-            '<div><img src="../../assets/images/icons/icon_arrow_right.png"></div>'
-        ],
-        responsive: {
-            600: {
-                items: 1
-            },
-            768: {
-                items: 2
-            },
-            1100: {
-                items: 3
-            }
-        },
-    });
-
+    // Слайдер
     const productSwiper = new Swiper('.products-items.swiper', {
         loop: true,
         spaceBetween: 75,
@@ -97,6 +57,7 @@ $(document).ready(() => {
         }
     });
 
+
     // WOW.js
     new WOW({
         animateClass: 'animate__animated',
@@ -115,7 +76,9 @@ $(document).ready(() => {
     document.querySelectorAll('#menu *').forEach((item) => {
         item.onclick = () => {
             closePopup('menu')
-            menu.removeChild(address)
+            if (menu.contains(address)) {
+                menu.removeChild(address)
+            }
         }
     })
 
@@ -171,32 +134,33 @@ $(document).ready(() => {
     })
 
     document.getElementById('phone-input').oninput = (event) => {
-    let value = event.target.value.replace(/\D/g, '')
-    let formatted = '';
-    if (value.length > 0) {
-        formatted += '+7 (';
+        let value = event.target.value.replace(/\D/g, '')
+        let formatted = '';
+        if (value.length > 0) {
+            formatted += '+7 (';
+        }
+        if (value.length > 1) {
+            formatted += value.slice(1, 4);
+        }
+        if (value.length >= 4) {
+            formatted += ') ' + value.slice(4, 7);
+        }
+        if (value.length >= 7) {
+            formatted += '-' + value.slice(7, 9);
+        }
+        if (value.length >= 9) {
+            formatted += '-' + value.slice(9, 11);
+        }
+        event.target.value = formatted
     }
-    if (value.length > 1) {
-        formatted += value.slice(1, 4);
-    }
-    if (value.length >= 4) {
-        formatted += ') ' + value.slice(4, 7);
-    }
-    if (value.length >= 7) {
-        formatted += '-' + value.slice(7, 9);
-    }
-    if (value.length >= 9) {
-        formatted += '-' + value.slice(9, 11);
-    }
-    event.target.value = formatted
-}
 
 
     // Закрываем всплывающее окно
     $('.close-button').click(() => closePopup('success-block'))
 
+
     // Обратный отсчет в форме заказа
-    timer(min=30, sec=0)
+    timer(min = 30, sec = 0)
 })
 
 
